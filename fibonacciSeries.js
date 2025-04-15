@@ -1,10 +1,10 @@
 console.log("Simple program to print Fibonacci Series.");
 
 function printSeries(n){
-    a = 0;
+    let a = 0;
     console.log(a);
 
-    b = 1;
+    let b = 1;
     console.log(b);
     n = n-2;
 
