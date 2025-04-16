@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter Update</title>
+</head>
+<body>
+    <button id="in">+</button>
+        <span id="val">0</span>
+    <button id="de">-</button>
+</body>
+
+<script>
+    /*
+    let value = document.getElementById("val");
+
+    function increment(value){
+        value = value+1;
+
+        return value;
+    }
+
+    function decrement(value){
+        value = value-1;
+        
+        return value;
+    }
+
+    //node based on user click on operator button  we need to call appropriate function.
+    let getOperator = document.getElementById("in");
+    let res = (getOperator == "in")?increment(value):decrement(value);
+
+    //till now i have got the update result, now i just want to populate it to value.
+    document.getElementById("val").textContent = res;
+    */
+
+   //make using  of EventListner(); that waits for an event to occur until it occurs.
+   let count = 0;
+
+   let getExistingValue = document.getElementById("val");
+
+   function updateValue(getExistingValue){
+        document.getElementById("val").textContent = count;
+   }
+
+
+   //making use eventListener to identify which operator was clicked. & Accordingly update the count value.
+   document.getElementById("in").addEventListener("click",function increment(){
+        //update the count value.
+        count = count+1;
+
+        //call updateValue() to change existing value.
+        updateValue();
+   });
+
+   //if user click on - operator.
+   document.getElementById("de").addEventListener("click",function decrement(){
+    //update count value.
+    count = count-1;
+
+    //call updatevalue() to udpate existing data.
+    updateValue();
+   });
+
+</script>
+</html>
