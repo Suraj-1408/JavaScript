@@ -1,0 +1,45 @@
+<!--
+Use of CallBAck function inside Arrow function.
+CALLbACK fUCNTION -  A callback function is function that is passed as argument to another Function as
+                    and gets executed based intial function def calling callback function.
+
+Arrow Function  - Its is just a Short form writing normal function definition or function Expression(where
+                function defintion is initialsed to let variable.)
+
+-->
+
+<!Document html>
+<body>
+    <p>Check Console for Output</p>
+</body>
+<script>
+const myArrowFunction = (matured,Immatured) =>{
+    
+    question = prompt("Enter You Age:");
+
+    if(question >18){
+        matured();
+    }
+
+    else{
+        Immatured();
+    }
+};
+
+
+//defining the call back function here.
+let matured = () =>{
+    console.log('User Age is ABove 18.');
+};
+
+let Immatured = ()=>{
+    console.log('User age is below 18.');
+};
+
+
+//now calling function using callback funtion.
+myArrowFunction(matured,Immatured);
+
+</script>
+
+</html>
