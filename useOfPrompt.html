@@ -1,0 +1,25 @@
+<!--Using Prompt  - THis method is usually used to take input from the user. 
+take two argument 1- Message to shown to user
+2 - value entered by user
+-->
+
+<html>
+<body>
+    <p>You entered your age as:</p>
+    <p id = "result">result</p>
+    
+</body>
+
+
+<script>
+const useofPrompt = () =>{
+    console.log("Use of prompt Message");
+
+    let res =  prompt("Enter your Age",100);
+    console.log(`You entered ${res} age.`);
+    document.getElementById('result').innerHTML=res;
+};
+
+console.log('Execution:',useofPrompt());
+</script>
+</html>
