@@ -1,0 +1,85 @@
+<html>
+    <head><title>Counter</title></head>
+    <style>
+        .button-container{
+            width:80%;
+            margin:250px auto;
+            text-align: center;
+        }
+        button{
+            height:40px;
+            width:30px;
+            border-color:black;
+            padding:10px 25px;
+            margin:0 5px;
+            display: inline-block;
+            cursor:pointer;
+            
+        }
+
+        .value{
+            display:inline-block;      
+            width:40px;
+            text-align: center;
+            font-size:30px;
+        }
+
+        button b{
+            font-size:21px;
+            font-weight: bold;
+        }
+        
+        .bminus{
+            background-color: red;
+        }
+        
+        .bplus{
+            background-color: green;
+        }
+
+    </style>
+    <body>
+        <div class="button-container">
+            <button class="bminus" id="minus"><b>-</b></button>
+                <span class="value" id="val">0</span>
+            <button class="bplus" id="plus"><b>+</b></button>
+        </div>
+    </body>
+
+    <script>
+
+        //minus
+        document.getElementById("minus").addEventListener("click",
+            function subtract(){
+                let currvalue = parseInt(document.getElementById("val").textContent);
+                let count = currvalue - 1;
+
+                if(count < 0){
+                     
+                    val.style.color="red";      //style always applied on html element here  its "val"
+                    document.getElementById("val").innerText = count;
+                }
+                else{
+                    document.getElementById("val").innerText = count;
+                }
+                //document.getElementById("val").innerText = (count < 0)?count.style.color="red":count.style.color="green";
+                //document.getElementById("val").innerText = count;
+            }
+        );
+
+        //PLUS
+        document.getElementById("plus").addEventListener("click",
+            function add(){
+                let currvalue = parseInt(document.getElementById("val").textContent);
+                let count = currvalue + 1;
+                //document.getElementById("val").innerText = (count > 0)?count=val.style.color="green":count=val.style.color="red";    
+                if(count >= 0){
+                    val.style.color ="green";
+                    document.getElementById("val").innerText = count;
+                }else{
+                    document.getElementById("val").innerText = count;
+                }
+            }
+        );
+    </script>
+</html>
