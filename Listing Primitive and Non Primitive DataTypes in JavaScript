@@ -1,0 +1,21 @@
+// There are Total Seven Primitive  && One Non Primitive DataTypes in JS
+
+
+//Primitive types are:NN(null & number) | SS(String & Symbol) | BB(Boolean & BigInt) | U(Undefined)
+
+let n=null  //the variable n is assigned to NULL or
+let num=24    //The num variable is an Integer of Integer type
+console.log("This is an Null:",n," This is an Integer:",num)
+
+var str="Hello Prince"
+let symbol=Symbol("This is a symbol which will be studied in future")
+console.log("This is a String:",str," USe of symbol(Symbol datatype):",symbol)
+
+
+let flag=true  // here flag varible holds boolean datatype
+let big=BigInt("129232123434")   //here big varibles holds large integer using bigInt function
+console.log("Boolean Datatype:",flag,"Big Integer Datatype:",big)
+console.log(typeof flag)
+
+let nd   //here nd is variable whose value is not defined or is assigned to NULL
+console.log("Undefined Varible:",nd)
